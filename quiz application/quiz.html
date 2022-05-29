@@ -1,0 +1,87 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz app</title>
+    <link rel='stylesheet' href='style.css'>
+
+    <!-- buttons -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap" rel="stylesheet">
+
+</head>
+<body onload="quizIsActive()" class='body'>
+
+        <div class="quiz-pick-container" id="choose-quiz-container">
+            <nav class='choose-quiz-nav'>
+                <ul class='text-decoration'>
+                    <li class='world-knowledge' id='world'>Knowledge about world</li>
+                    <li class='culinary-quiz' id='culinary'>Culinaries</li>
+                    <li class='basketball-quiz' id='basketball'>Basketball knowledge</li>
+                    <li class='animals-quiz' id='animal'>Animals all over the world</li>
+                    <li class='his-quiz' id='historical'>Historical check</li>
+                </ul>
+            </nav>
+                <form method='get' action="index.html">
+                    <button type="submit" class="btn btn-info" id='back-home-page'>Back home page</button>
+                </form>
+        
+        </div> 
+
+    <!-- start quiz -->
+        
+        <div class="hide-quiz" id="quiz-hide-box">
+            <div class="container" id='quiz-container'>
+                    <div class="title-text" id='title-quiz-text'>Title
+                    </div>
+
+                    <h1 class="countdown" id="counter">3</h1>
+
+                    <div class="question-hide-box" id='hide'>
+                        <nav class="info-bar" id='info-bar'>
+                            <ul>
+                                <li id='timer'>00:<span id='time-to-change'>15</span></li>
+                                <li id='question-number'>question <span id='passed'>0</span>/ <span id='total'>0</span></li>
+                            </ul>
+                        </nav>
+
+                        <div class="question-show-box">
+                            <h2 class='question' id='question-text'>question</h2>
+                        </div>
+                        <div class="space-between">
+                            <button type="button" class="btn btn-info" id='next' onclick="resetCounter()">next</button>
+                        </div>
+                        <div class="answer-box" id='answer-box'>
+                            <button type="radio" name='1' value='' class="btn btn-warning btn-lg " id='one' onclick='copyPlayerAnswer(this)'>answer 1</button>
+                            <button type="radio" name='2' class="btn btn-primary btn-lg " id='two' onclick='copyPlayerAnswer(this)'>answer 2</button>
+                            <button type="radio" name='3' class="btn btn-success btn-lg " id='three' onclick='copyPlayerAnswer(this)'>answer 3</button>
+                            <button type="radio" name='4' class="btn btn-danger btn-lg " id='four' onclick='copyPlayerAnswer(this)'>answer 4</button> 
+                        </div>
+                    </div>
+
+                    <div class="ending-page" id='last-page'>
+                        <h2>DONE!</h2>
+                        <h3 class='not-passed' id='user-not-passed'>You should practice your knowledge</h3>
+                        <h3 class="passed" id="user-passed">Your knowledge is at great level</h3>
+                        <h3>Final score is <span id='user-score'>0</span>/<span id='all-questions'>0</span></h3>
+                        <h3>You ended with <span id='score-in-percentage'>0</span></h3>
+                        <h2>THANK YOU FOR JOINING OUR QUIZ</h2>
+                    </div>
+
+            </div>
+
+            <div class="navigation">
+                <button type="button" class="btn btn-light" id="submit">start</button>
+                <button type="button" class="btn btn-light" id="retake">Menu</button>
+            </div>
+        </div>
+
+    
+<script src='script.js'></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home page</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- buttons -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap" rel="stylesheet">
+    
+</head>
+
+<body onload="writeTotalScore()" class='body'>
+
+    <!-- main page -->
+
+
+    <div class="home-page" id="home-page-container">
+        <nav class='home-page-nav' id='nav-of-homepage'>
+            <ul>
+                <li class="game-rules" id='rules-of-game'>
+                    <img src="https://www.modestoview.com/wp-content/uploads/2020/04/online.png" alt="" width='250'>
+                    <h4>Game Rules</h4>
+                    <p>Before starting read game rules in aim of better understanding idea</p>
+                    <a href="gamerules.html">Click to learn more</a>
+                </li>
+                <li class="quiz-pick" id='pick-quiz'>
+                    <img src="https://cdn.dribbble.com/users/2230230/screenshots/9650143/online_education_4x.png" alt=""
+                        width='250' height='170'>
+                    <h4>Choose Quiz</h4>
+                    <p>If you want to start quiz challenge click the link and pick one you would like to join</p>
+                    <a href="quiz.html" onclick='loadAttribute()'>Click here to learn more</a>
+                </li>
+                <li class='total-score' id='your-total-score'>
+                    <img src="https://storytale.io/wp-content/uploads/2020/05/stayhome-06-online-education.png" alt=""
+                    width='250' height='170'>
+                    <h4>Total score</h4>
+                    <h6>Your score is <span id='player-score'>0</span>/<span id='total-possible'>0</span></h6>
+                    <h6 id=message></h6>
+                    <button type="button" class="btn btn-warning" id='reset-total-score' onclick='resetTotalScore()'>Reset your score</button>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <script src='script.js'></script>
+    
+</body>
+</html>
