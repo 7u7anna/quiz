@@ -1,4 +1,4 @@
-# quiz
+# Quiz application
 quiz web app
 
 <img width="953" alt="quiz_app_main" src="https://user-images.githubusercontent.com/77678424/180502262-15f345c5-d244-40d8-982b-e82a05822acf.png">
